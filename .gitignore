@@ -9,3 +9,4 @@ cqui_settings_local.sql
 .DS_Store
 /.settings/
 /.buildpath
+/.vs
