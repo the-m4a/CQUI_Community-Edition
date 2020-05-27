@@ -330,7 +330,9 @@
 
               <!-- CQUI : Removd the divider -->
               <!-- Static: Horizontal divider for offers and inventories-->
-              <!--Grid ID="HorizontalDivider" Style="Divider4Grid" Size="parent-2,10" Anchor="C,C" Hidden ="1"/>
+              <!-- <Grid Style="Divider4Grid" Size="parent-2,10" Anchor="C,C" Hidden="1">
+                <Image Texture="Controls_Deco2" Size="41,26" Anchor="C,T" Offset="0,-12"/>
+              </Grid> -->
               <!-- CQUI : Changed height -->
               <Container ID="MyInventory" Size="249,parent-30" Anchor="L,T">
 
