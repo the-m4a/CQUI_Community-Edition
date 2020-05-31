@@ -315,17 +315,22 @@ end
 
 function OnToggleExtras()
   if Controls.LaunchExtraShow:IsChecked() then
-    Controls.LaunchExtraControls:SetHide(true);
+    -- CQUI: This is the little button that normally shows a check-mark in the unmodded game
+    --       Clicking this would list extra items, like a context menu.
+    --       At the moment, there are no extra items, so it won't do much of anything.
+    if (m_LaunchbarExtras ~= nil and #m_LaunchbarExtras > 0) then
+      Controls.LaunchExtraControls:SetHide(true);
 
-    Controls.LaunchExtraAlpha:SetToBeginning();
-    Controls.LaunchExtraSlide:SetToBeginning();
+      Controls.LaunchExtraAlpha:SetToBeginning();
+      Controls.LaunchExtraSlide:SetToBeginning();
 
-    Controls.LaunchExtraAlpha:Play();
-    Controls.LaunchExtraSlide:Play();
+      Controls.LaunchExtraAlpha:Play();
+      Controls.LaunchExtraSlide:Play();
 
-    Controls.LaunchExtraControls:SetHide(false);
+      Controls.LaunchExtraControls:SetHide(false);
 
-    BuildExtraEntries();
+      BuildExtraEntries();
+    end
   else
     OnCloseExtras()
   end
